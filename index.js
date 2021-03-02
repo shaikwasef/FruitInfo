@@ -18,7 +18,10 @@ function request_data() {
   request.onload = function() {
     var data = JSON.parse(this.response);
     if (request.status >= 200 && request.status < 400) {
-      console.log(data);
+      console.log(data[0].name);
+      console.log(data[0].gender);
+      console.log(data[0].born);
     }
   };
+  request.send();
 }
